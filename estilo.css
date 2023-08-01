@@ -1,0 +1,109 @@
+#container_iniciativaDemissao{
+    display: none;
+}
+
+#sucesso_tempoTrabalhado{
+    display: none;
+    color:green;
+}
+
+#sucesso_diasTrabalhados{
+    display: none;
+    color:green;
+}
+
+#sucesso_tempoTotalTrabalhado{
+    display: none;
+    color:green;
+}
+
+#secaoResultado{
+    display: none;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.padding-20{
+    padding: 20px;
+}
+
+.bg-blue{
+    background-color:#091878;
+}
+
+.bg-white{
+    background-color: #eaf4f6 !important;
+    
+}
+
+.botao-calculos{
+    width: 300px;
+    border: 0px;
+    border-radius: 4px;
+    padding: 15px;
+    background-color:#091878;
+    color: #eaf4f6;
+    box-shadow: 2px 2px 2px;
+}
+
+.botao-calculos:hover{
+    scale: 1.02;
+}
+
+#divForm{
+    border-radius: 15px;
+}
+
+input{
+    border:0px;
+    border-bottom: 2px solid black;
+}
+
+input:focus{
+    outline: none;
+}
+
+.botao-gravar{
+    border:2px solid #091878 ;
+    padding:10px;
+    border-radius: 5px;
+    width: 200px;
+
+}
+
+.margin-top-15{
+    margin-top: 25px;
+}
+
+legend{
+    font-size: 20px;
+}
+
+.border-radius{
+    border-radius: 15px;
+}
+
+.div-titulo{
+    background-color: rgb(25, 50, 71);
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1;
+    margin-bottom: -25px;
+    box-shadow: 2px 2px 2px;
+}
+
+.div-titulo h1{
+    font-size: 36px;
+    color:#eaf4f6
+}
+
+
+
+

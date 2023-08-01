@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<section class="d-flex justify-content-center bg-blue padding-20" >
+    <div  class="w-80 padding-20 d-flex  flex-column align-items-center"  id="divForm">
+        <div class="div-titulo">
+            <h1 class="text-center">Simule o valor de sua rescisão:</h1>
+        </div>
+        <div class="bg-white border-radius padding-20">
+            <form   class="d-flex flex-column gap-3"  id="meuForm">
+                <fieldset class="padding-20" >
+                    <legend>Como foi a sua demissão?</legend>
+                        <label for="justaCausa">
+                            <input id="justaCausa" type="radio" name="tipoDemissao" value="justaCausa" >
+                            Justa Causa
+                        </label>
+                        <label for="sem_justaCausa">
+                            <input class="bg-white" id="sem_justaCausa" type="radio" name="tipoDemissao" value="sem_justaCausa" >
+                            Demissão normal
+                        </label>
+                </fieldset>
+                
+                <fieldset class="padding-20">
+                    <legend>Qual era o valor do seu salário bruto?</legend>
+                        <label>O valor total, sem considerar os descontos:
+                            <input class="bg-white text-center" id="valorSalario" type="text" placeholder="digite seu salário bruto">
+                        </label>
+                </fieldset>
+
+                <fieldset class="padding-20" >
+                    <legend>Quantos dias você trabalhou no mês de sua demissão?</legend>
+                    <label> Considere todos os dias, desde o dia 1 até o último dia em que trabalhou:
+                    <input class="bg-white text-center" id="diasTrabalhados" type="text">
+                    </label>
+                    <div class="text-center margin-top-15">
+                        <button class="botao-gravar"  type="button" id="botao_diasTrabalhados">Gravar</button>
+                    </div>
+                    <div id="sucesso_diasTrabalhados">Salvo com sucesso!</div>
+                </fieldset>
+
+                <fieldset class="padding-20" >
+                    <legend>Quanto tempo você trabalhou na empresa neste ano?</legend>
+                    <label>Digite o tempo em meses e considere o último mês somente se trabalhou MAIS de 15 dias :
+                    <input class="bg-white text-center" id="tempoTrabalhado" type="text">
+                    </label>
+                    <div class="text-center margin-top-15">
+                        <button class="botao-gravar "  type="button" id="botao_tempoTrabalhado">Gravar</button>
+                    </div>
+                    <div id="sucesso_tempoTrabalhado">Salvo com sucesso!</div>
+                </fieldset>
+
+                <fieldset class="padding-20" >
+                    <legend>Para calcularmos sua multa do FGTS, diga quantos meses você trabalhou na empresa? </legend>
+                    <label>Digite o tempo total que trabalhou na empresa, em meses, considerando 12 meses a cada ano:
+                        <input class="bg-white text-center" type="text" id="tempoTotalTrabalhado">
+                    </label>
+                    <div  class="text-center margin-top-15">
+                        <button class="botao-gravar"   id="botao_tempoTotalTrabalhado" type="button">Gravar</button>
+                    </div>
+                    <div id="sucesso_tempoTotalTrabalhado">Salvo com sucesso!</div>
+                </fieldset>
+
+                <fieldset class="padding-20"  id="container_iniciativaDemissao">
+                    <legend>De quem foi a iniciativa da demissão?</legend>
+                        <label for="pediDemissao">
+                            <input id="pediDemissao" type="radio" name="iniciativaDemissao" value="pediDemissao" >
+                            Eu me demiti
+                        </label>
+                        <label for="fuiDemitido">
+                            <input id="fuiDemitido" type="radio" name="iniciativaDemissao" value="fuiDemitido" >
+                            Fui demitido
+                        </label>
+                </fieldset>
+                <div class="text-center d-flex flex-column justify-content-center align-items-center gap-3">
+                    <button class="botao-calculos" id="botao" type="button">Calcular</button>
+                    <button class="botao-calculos" id="botaoResetar" type="button">Fazer novo cálculo</button>
+                </div>
+            </form>
+        </div>
+    </div> 
+</section> 
+
+
+
+<section class="justify-content-center" id="secaoResultado">
+    <div class="text-center w-80">
+        <h3>Essas são as suas verbas:</h3>
+        <div class="" id="resultadoFinal">
+
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+
+
+
+
+</body>
+</html>
