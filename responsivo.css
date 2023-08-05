@@ -1,0 +1,28 @@
+@media screen and (max-width: 720px) {
+
+    .div-titulo h1{
+        font-size: 26px;
+    }
+
+    .div-titulo h3{
+        font-size: 26px;
+    }
+
+
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+    .div-titulo h1{
+        font-size: 26px;
+        
+    }
+
+    .div-titulo{
+        min-width: 200px ;
+    }
+
+   
+
+  }
