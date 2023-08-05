@@ -21,8 +21,21 @@
     display: none;
 }
 
+#explicacao-inicial{
+    color: #eaf4f6 ;
+    text-align: justify;
+}
+
+#explicacao-inicial h2{
+    text-align: center ;
+}
+
 .w-80{
     width: 80%;
+}
+
+.w-75{
+    width: 79%;
 }
 
 .w-100{
@@ -97,6 +110,7 @@ legend{
     z-index: 1;
     margin-bottom: -25px;
     box-shadow: 2px 2px 2px;
+    text-align: center;
 }
 
 .div-titulo h1{
@@ -104,8 +118,21 @@ legend{
     color:#eaf4f6
 }
 
+.div-titulo h3{
+    font-size: 36px;
+    color:#eaf4f6
 
+}
 
+.fonte-negrito{
+    font-weight: bold;
+}
+
+.total-rescisao{
+    border: 2px solid green;
+    border-radius: 4px;
+    padding: 5px;
+}
 
 
 

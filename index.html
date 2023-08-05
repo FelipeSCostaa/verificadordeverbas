@@ -11,10 +11,17 @@
 <body>
 
 <section class="d-flex justify-content-center bg-blue padding-20" >
-    <div  class="w-80 padding-20 d-flex  flex-column align-items-center"  id="divForm">
+    <div   class="w-80  d-flex  flex-column align-items-center"  id="divForm">
+        <div id="explicacao-inicial">
+            <h2>Como funciona?</h2>
+            <p>Essa ferramenta tem como objetivo auxiliar o trabalhador a ter uma ideia de quanto seria o valor de sua rescisão em caso de demissão, seja ela por justa causa, demissão por iniciativa do patrão ou demissão por iniciativa do próprio trabalhador.</p>
+            <p>Mas é importante dizer que a ferramenta não irá apresentar o valor exato, mas sim aproximado, pois ela não calcula o aviso prévio, nem férias vencidas se for o caso, por exemplo, e nem as horas extras.</p>
+            <p>Para cálculos exatos, existem ferramentas disponibilizadas pro tribunais do trabalho que farão os cálculos de forma exata. Para isso, procure um advogado especialista para te auxiliar.</p>
+        </div>
         <div class="div-titulo">
             <h1 class="text-center">Simule o valor de sua rescisão:</h1>
         </div>
+
         <div class="bg-white border-radius padding-20">
             <form   class="d-flex flex-column gap-3"  id="meuForm">
                 <fieldset class="padding-20" >
@@ -26,6 +33,18 @@
                         <label for="sem_justaCausa">
                             <input class="bg-white" id="sem_justaCausa" type="radio" name="tipoDemissao" value="sem_justaCausa" >
                             Demissão normal
+                        </label>
+                </fieldset>
+
+                <fieldset class="padding-20"  id="container_iniciativaDemissao">
+                    <legend>De quem foi a iniciativa da demissão?</legend>
+                        <label for="pediDemissao">
+                            <input id="pediDemissao" type="radio" name="iniciativaDemissao" value="pediDemissao" >
+                            Eu me demiti
+                        </label>
+                        <label for="fuiDemitido">
+                            <input id="fuiDemitido" type="radio" name="iniciativaDemissao" value="fuiDemitido" >
+                            Fui demitido
                         </label>
                 </fieldset>
                 
@@ -69,17 +88,7 @@
                     <div id="sucesso_tempoTotalTrabalhado">Salvo com sucesso!</div>
                 </fieldset>
 
-                <fieldset class="padding-20"  id="container_iniciativaDemissao">
-                    <legend>De quem foi a iniciativa da demissão?</legend>
-                        <label for="pediDemissao">
-                            <input id="pediDemissao" type="radio" name="iniciativaDemissao" value="pediDemissao" >
-                            Eu me demiti
-                        </label>
-                        <label for="fuiDemitido">
-                            <input id="fuiDemitido" type="radio" name="iniciativaDemissao" value="fuiDemitido" >
-                            Fui demitido
-                        </label>
-                </fieldset>
+
                 <div class="text-center d-flex flex-column justify-content-center align-items-center gap-3">
                     <button class="botao-calculos" id="botao" type="button">Calcular</button>
                     <button class="botao-calculos" id="botaoResetar" type="button">Fazer novo cálculo</button>
@@ -91,19 +100,22 @@
 
 
 
-<section class="justify-content-center" id="secaoResultado">
-    <div class="text-center w-80">
+<section class="justify-content-center bg-blue padding-20 flex-column align-items-center" id="secaoResultado">
+     <div class="div-titulo">
         <h3>Essas são as suas verbas:</h3>
-        <div class="" id="resultadoFinal">
-            <div><span>Seu saldo de salário é: </span><span id="saldoSalarioResult"></span></div>
-            <div id="ocultarResult13salario"><span>13º salário proposcional: </span><span id="salario13Result"></span></div>
-            <div id="ocultarResultferias"><span>Férias proporcionais mais 1/3: </span><span id="feriasResult"></span></div>
-            <div id="ocultarResultMulta"><span>Multa de 40% do FGTS: </span><span id="multaFGTSresult"></span></div>
-            <div><span>Valor aproximado da rescisão: </span><span id="rescisaoTotalResult"></span></div>
-            <div id="ocultarResultFGTS"><span>Saldo do FGTS: </span><span id="saldoFGTSresult"></span><span style="color:red">*esse valor não entra na soma das verbas rescisórias, somente o valor da multa entra!</span></div>
+    </div>
+    <div  class="text-center w-80 bg-white border-radius padding-20">
+        <div  class="padding-20" id="resultadoFinal">
+            <div><span class="fonte-negrito">Seu saldo de salário é: </span><span id="saldoSalarioResult"></span></div>
+            <div  id="ocultarResult13salario"><span class="fonte-negrito">13º salário proposcional: </span><span id="salario13Result"></span></div>
+            <div id="ocultarResultferias"><span class="fonte-negrito">Férias proporcionais mais 1/3: </span><span id="feriasResult"></span></div>
+            <div id="ocultarResultMulta"><span class="fonte-negrito">Multa de 40% do FGTS: </span><span id="multaFGTSresult"></span></div>
+            <div class="total-rescisao"><span class="fonte-negrito">Valor aproximado da rescisão: </span><span id="rescisaoTotalResult"></span></div>
+            <div id="ocultarResultFGTS"><span class="fonte-negrito">Saldo do FGTS: </span><span id="saldoFGTSresult"></span><span style="color:red">*esse valor não entra na soma das verbas rescisórias, somente o valor da multa entra!</span></div>
         </div>
+        <h3>Observações importantes:</h3>
         <div id="explicacao">
-            <h3>Observações importantes:</h3>
+            
 
         </div>
     </div>
