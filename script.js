@@ -149,6 +149,32 @@ function calcularVerbas(){
     }
 }
 
+botao.addEventListener('click', verificarForm)
+
+
+function verificarForm() {
+    var valorSalario = document.getElementById("valorSalario").value;
+    var diasTrabalhados = document.getElementById("diasTrabalhados").value;
+    var tempoTotalTrabalhado = document.getElementById("tempoTotalTrabalhado").value;
+    var tempoTrabalhado = document.getElementById("tempoTrabalhado").value;
+
+    if (valorSalario === "" || diasTrabalhados === "" || tempoTotalTrabalhado === "" || tempoTrabalhado === "") {
+        alert("Um ou mais campos não estão preenchidos. Confira e preencha, por favor.");
+    } else {
+        
+        valorSalario = parseFloat(valorSalario);
+        diasTrabalhados = parseInt(diasTrabalhados);
+        tempoTotalTrabalhado = parseInt(tempoTotalTrabalhado);
+        tempoTrabalhado = parseInt(tempoTrabalhado);
+
+        if (isNaN(valorSalario) || isNaN(diasTrabalhados) || isNaN(tempoTotalTrabalhado) || isNaN(tempoTrabalhado)) {
+            alert("Um ou mais campos contêm valores inválidos. Verifique os campos numéricos.");
+        }
+    }
+}
+
+
+
 let botaoResetar = document.getElementById("botaoResetar");
 let meuForm = document.getElementById("meuForm");
 
