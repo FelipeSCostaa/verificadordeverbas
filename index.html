@@ -28,11 +28,11 @@
                 <fieldset class="padding-20" >
                     <legend>Como foi a sua demissão?</legend>
                         <label for="justaCausa">
-                            <input id="justaCausa" type="radio" name="tipoDemissao" value="justaCausa" >
+                            <input id="justaCausa" type="radio" name="tipoDemissao" value="justaCausa" required >
                             Justa Causa
                         </label>
                         <label for="sem_justaCausa">
-                            <input class="bg-white" id="sem_justaCausa" type="radio" name="tipoDemissao" value="sem_justaCausa" >
+                            <input class="bg-white" id="sem_justaCausa" type="radio" name="tipoDemissao" value="sem_justaCausa" required >
                             Demissão normal
                         </label>
                 </fieldset>
@@ -40,11 +40,11 @@
                 <fieldset class="padding-20"  id="container_iniciativaDemissao">
                     <legend>De quem foi a iniciativa da demissão?</legend>
                         <label for="pediDemissao">
-                            <input id="pediDemissao" type="radio" name="iniciativaDemissao" value="pediDemissao" >
+                            <input id="pediDemissao" type="radio" name="iniciativaDemissao" value="pediDemissao" required >
                             Eu me demiti
                         </label>
                         <label for="fuiDemitido">
-                            <input id="fuiDemitido" type="radio" name="iniciativaDemissao" value="fuiDemitido" >
+                            <input id="fuiDemitido" type="radio" name="iniciativaDemissao" value="fuiDemitido" required >
                             Fui demitido
                         </label>
                 </fieldset>
@@ -52,40 +52,31 @@
                 <fieldset class="padding-20">
                     <legend>Qual era o valor do seu salário bruto?</legend>
                         <label>O valor total, sem considerar os descontos:
-                            <input class="bg-white text-center" id="valorSalario" type="text" placeholder="digite seu salário bruto">
+                            <input class="bg-white text-center" id="valorSalario" type="text" placeholder="digite seu salário bruto" inputmode="numeric" required>
                         </label>
                 </fieldset>
 
                 <fieldset class="padding-20" >
                     <legend>Quantos dias você trabalhou no mês de sua demissão?</legend>
                     <label> Considere todos os dias, desde o dia 1 até o último dia em que trabalhou:
-                    <input class="bg-white text-center" id="diasTrabalhados" type="text" placeholder="digite aqui">
+                    <input class="bg-white text-center" id="diasTrabalhados" type="text" placeholder="digite aqui" inputmode="numeric" required>
                     </label>
-                    <div class="text-center margin-top-15">
-                        <button class="botao-gravar"  type="button" id="botao_diasTrabalhados">Gravar</button>
-                    </div>
                     <div id="sucesso_diasTrabalhados">Salvo com sucesso!</div>
                 </fieldset>
 
                 <fieldset class="padding-20" >
                     <legend>Quanto tempo você trabalhou na empresa neste ano?</legend>
                     <label>Digite o tempo em meses e considere o último mês somente se trabalhou MAIS de 15 dias :
-                    <input class="bg-white text-center" id="tempoTrabalhado" type="text" placeholder="digite aqui">
+                    <input class="bg-white text-center" id="tempoTrabalhado" type="text" placeholder="digite aqui" inputmode="numeric" required>
                     </label>
-                    <div class="text-center margin-top-15">
-                        <button class="botao-gravar "  type="button" id="botao_tempoTrabalhado">Gravar</button>
-                    </div>
                     <div id="sucesso_tempoTrabalhado">Salvo com sucesso!</div>
                 </fieldset>
 
                 <fieldset class="padding-20" >
                     <legend>Para calcularmos sua multa do FGTS, diga quantos meses você trabalhou na empresa? </legend>
                     <label>Digite o tempo total que trabalhou na empresa, em meses, considerando 12 meses a cada ano:
-                        <input class="bg-white text-center" type="text" id="tempoTotalTrabalhado" placeholder="digite aqui">
+                        <input class="bg-white text-center" type="text" id="tempoTotalTrabalhado" placeholder="digite aqui" inputmode="numeric" required>
                     </label>
-                    <div  class="text-center margin-top-15">
-                        <button class="botao-gravar"   id="botao_tempoTotalTrabalhado" type="button">Gravar</button>
-                    </div>
                     <div id="sucesso_tempoTotalTrabalhado">Salvo com sucesso!</div>
                 </fieldset>
 

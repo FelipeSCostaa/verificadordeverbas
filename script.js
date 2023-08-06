@@ -23,123 +23,27 @@ function mostrar_container_iniciativaDemissao() {
 
 //---------------------------------------------------------------------------
 
-
-let valorSalario;
-
-let diasTrabalhados;
-
-let botao_diasTrabalhados = document.getElementById("botao_diasTrabalhados");
-
-let saldoSalario;
-
-botao_diasTrabalhados.addEventListener('click', calculoSaldoSalario);
-
-function calculoSaldoSalario(){
-        let sucesso_diasTrabalhados = document.getElementById("sucesso_diasTrabalhados");
-
-        valorSalario = parseFloat(document.getElementById("valorSalario").value);
-        diasTrabalhados = parseInt(document.getElementById("diasTrabalhados").value);
-
-        saldoSalario = parseFloat(((valorSalario/30)*diasTrabalhados).toFixed(2));
-
-        sucesso_diasTrabalhados.style.display = 'block';
-
-        return saldoSalario;
-}
-
-
-//-----------------------------------------------------------
-
-
 let pediDemissao = document.getElementById("pediDemissao");
 
 let fuiDemitido = document.getElementById("fuiDemitido");
 
 let tempoTrabalhado
 
-let botao_tempoTrabalhado = document.getElementById("botao_tempoTrabalhado");
-
-botao_tempoTrabalhado.addEventListener('click', calculoFerias);
-
 let ferias;
 
+let salario13;
 
+let valorSalario;
 
-function calculoFerias(){
-        
-        let sucesso_tempoTrabalhado = document.getElementById("sucesso_tempoTrabalhado");
+let diasTrabalhados;
 
-        valorSalario = parseFloat(document.getElementById("valorSalario").value);
-        tempoTrabalhado = parseInt(document.getElementById("tempoTrabalhado").value);
-
-        ferias = parseFloat((((valorSalario*tempoTrabalhado)/12)+((valorSalario*tempoTrabalhado)/12)/3).toFixed(2));
-
-        sucesso_tempoTrabalhado.style.display = 'block'
-
-        return ferias;
-}
-
-
-    botao_tempoTrabalhado.addEventListener('click', calculoSalario13)
-
-    let salario13;
-
-
-function calculoSalario13(){
-
-    valorSalario = parseFloat(document.getElementById("valorSalario").value);
-    tempoTrabalhado = parseInt(document.getElementById("tempoTrabalhado").value);
-
-    salario13 = parseFloat(((valorSalario/12)*tempoTrabalhado).toFixed(2));
-
-    return salario13;
-
-}
-
-
-
+let saldoSalario;
 
 let tempoTotalTrabalhado;
 
-let botao_tempoTotalTrabalhado = document.getElementById("botao_tempoTotalTrabalhado");
-
-botao_tempoTotalTrabalhado.addEventListener('click', calcularMultaFgts);
-
 let multaFgts;
 
-
-function calcularMultaFgts(){
-
-    let sucesso_tempoTotalTrabalhado = document.getElementById("sucesso_tempoTotalTrabalhado");
-
-    valorSalario = parseFloat(document.getElementById("valorSalario").value);
-    tempoTotalTrabalhado = parseInt(document.getElementById("tempoTotalTrabalhado").value);
-
-    multaFgts = parseFloat((((valorSalario*8/100)*tempoTotalTrabalhado)*40/100).toFixed(2));
-    
-
-    sucesso_tempoTotalTrabalhado.style.display = 'block';
-
-    return multaFgts;
-}
-
-botao_tempoTotalTrabalhado.addEventListener('click', calcularFGTS);
-
 let FGTS;
-
-function calcularFGTS(){
-
-    valorSalario = parseFloat(document.getElementById("valorSalario").value);
-    tempoTotalTrabalhado = parseInt(document.getElementById("tempoTotalTrabalhado").value);
-
-
-    FGTS = parseFloat(((valorSalario*8/100)*tempoTotalTrabalhado).toFixed(2));
-
-    return FGTS;
-}
-
-
-
 
 //----------------------------------------------------------
 let botao = document.getElementById("botao");
@@ -149,20 +53,26 @@ let secaoResultado = document.getElementById("secaoResultado");
 let resultadoFinal = document.getElementById("resultadoFinal");
 
 
-
-
-
 botao.addEventListener('click', calcularVerbas);
 
 function calcularVerbas(){
 
    
     let rescisaoTotal;
+
+    valorSalario = parseFloat(document.getElementById("valorSalario").value);
+    diasTrabalhados = parseInt(document.getElementById("diasTrabalhados").value);
+    tempoTotalTrabalhado = parseInt(document.getElementById("tempoTotalTrabalhado").value);
+    tempoTrabalhado = parseInt(document.getElementById("tempoTrabalhado").value);
+
+    saldoSalario = parseFloat(((valorSalario/30)*diasTrabalhados).toFixed(2));
+    ferias = parseFloat((((valorSalario*tempoTrabalhado)/12)+((valorSalario*tempoTrabalhado)/12)/3).toFixed(2));
+    salario13 = parseFloat(((valorSalario/12)*tempoTrabalhado).toFixed(2));
+    multaFgts = parseFloat((((valorSalario*8/100)*tempoTotalTrabalhado)*40/100).toFixed(2));
+    FGTS = parseFloat(((valorSalario*8/100)*tempoTotalTrabalhado).toFixed(2));
     
 
-      sucesso_diasTrabalhados.style.display = 'none';
-      sucesso_tempoTotalTrabalhado.style.display = 'none';
-      sucesso_tempoTrabalhado.style.display = 'none';
+      
 
 
     if(botao_com_justa_causa.checked){
