@@ -196,7 +196,7 @@ botaoResetar.addEventListener('click', resetar);
 function resetar(){
     
         meuForm.reset();
-      
+        seta.style.display = 'none'
         secaoResultado.style.display = 'none';
       }
       
