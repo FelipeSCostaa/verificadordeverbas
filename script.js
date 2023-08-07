@@ -149,6 +149,24 @@ function calcularVerbas(){
     }
 }
 
+
+botao.addEventListener('click', mostrarResultado);
+
+function mostrarResultado() {
+    
+    
+
+    
+    let offsetTop = secaoResultado.offsetTop;
+
+    
+    window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth' 
+    });
+}
+
+
 botao.addEventListener('click', verificarForm)
 
 
