@@ -150,7 +150,7 @@ function calcularVerbas(){
 }
 
 
-botao.addEventListener('click', mostrarResultado);
+/*botao.addEventListener('click', mostrarResultado);
 
 
 function mostrarResultado() {
@@ -163,7 +163,7 @@ function mostrarResultado() {
         top: offsetTop,
         behavior: 'smooth' 
     });
-}
+}*/
 
 
 
