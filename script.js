@@ -151,12 +151,11 @@ function calcularVerbas(){
 
 
 botao.addEventListener('click', mostrarResultado);
+botao.addEventListener('touchstart', mostrarResultado);
 
 function mostrarResultado() {
     
-    
 
-    
     let offsetTop = secaoResultado.offsetTop;
 
     
@@ -165,6 +164,8 @@ function mostrarResultado() {
         behavior: 'smooth' 
     });
 }
+
+
 
 
 botao.addEventListener('click', verificarForm)
