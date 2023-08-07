@@ -52,10 +52,15 @@ let secaoResultado = document.getElementById("secaoResultado");
 
 let resultadoFinal = document.getElementById("resultadoFinal");
 
+let seta = document.getElementById("divSeta");
+
 
 botao.addEventListener('click', calcularVerbas);
 
 function calcularVerbas(){
+
+
+    seta.style.display = 'block'
 
    
     let rescisaoTotal;
@@ -150,20 +155,7 @@ function calcularVerbas(){
 }
 
 
-/*botao.addEventListener('click', mostrarResultado);
 
-
-function mostrarResultado() {
-    
-
-    let offsetTop = secaoResultado.offsetTop;
-
-    
-    window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth' 
-    });
-}*/
 
 
 
