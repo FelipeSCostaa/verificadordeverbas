@@ -151,7 +151,7 @@ function calcularVerbas(){
 
 
 botao.addEventListener('click', mostrarResultado);
-botao.addEventListener('touchstart', mostrarResultado);
+botao.addEventListener('touchend', mostrarResultado);
 
 function mostrarResultado() {
     
@@ -164,6 +164,8 @@ function mostrarResultado() {
         behavior: 'smooth' 
     });
 }
+
+
 
 
 
